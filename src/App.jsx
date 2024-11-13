@@ -23,7 +23,7 @@ function App() {
       <Header />
       </div>
       <div className='w-[10%] px-6 bg-blue-500 font-bold rounded shadow-md flex justify-center items-center'>
-      <button className='bg-gray-200 rounded hover:bg-gray-300 px-5 py-3' onClick={LogoutButton}>Logout</button>
+      {/* <button className='bg-gray-200 rounded hover:bg-gray-300 px-5 py-3' onClick={LogoutButton}>`Logout</button> */}
       </div>
     </div>
       
@@ -32,6 +32,7 @@ function App() {
           <Dashboard />
         </div>
         <div className=''>
+          {/* \huuhhah */}
           <Routes>
             <Route path="/ProductsShow" element={<ProductsShow />} />
             <Route path="/Users" element={<Users />} />
