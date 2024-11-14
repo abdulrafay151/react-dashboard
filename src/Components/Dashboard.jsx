@@ -1,34 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <div className='h-screen p-8 bg-blue-500 text-white font-bold'>
-            <h2 className="text-4xl mb-4">Dashboard</h2>
-            <ul className='text-xl font-bold'>
-                <Link to="/ProductsShow" className="mb-2">Home</Link>
-                <br />
-                {/* <Link to="/Users" className="mb-2">Users</Link> */}
-                {/* <br /> */}
-                {/* <Link to="/Products" className="mb-2">Products</Link> */}
-                {/* <br /> */}
-                {/* <Link to="/UserForm" className="mb-2">User Form</Link> */}
-                {/* <br /> */}
-                {/* <Link to="/Comment" className="mb-2">Comments</Link> */}
-                {/* <br/> */}
-                <Link to="/" className="mb-2">Sign Up</Link>
-                <br/>
-                {/* <Link to="/Login" className="mb-2">Login</Link> */}
-                {/* <br/> */}
-                <Link to="/SignupUsershow" className="mb-2">Signup User</Link>
-                <br/>
-                <Link to="/ProductsForm" className="mb-2">Product Form</Link>
-                <br/>
-                {/* <Link to="/ProductsShow" className="mb-2">Products Show</Link> */}
+        <div className='h-screen p-8 bg-blue-500 text-white font-bold flex flex-col'>
+            <h2 className="text-4xl mb-6">Dashboard</h2>
+            <ul className='space-y-4 text-lg font-semibold'>
+                <li>
+                    <Link to="/ProductsShow" className="hover:text-blue-300 transition duration-200">Home</Link>
+                </li>
+                <li>
+                    <Link to="/SignupUserShow" className="hover:text-blue-300 transition duration-200">SignUp Data</Link>
+                </li>
+                {/* <li>
+                    <Link to="/SignupUsershow" className="hover:text-blue-300 transition duration-200">Signup User</Link>
+                </li> */}
+                {/* <li>
+                    <Link to="/ProductsForm" className="hover:text-blue-300 transition duration-200">Product Form</Link>
+                </li> */}
+                {/* <li>
+                    <Link to="/CommentForm" className="hover:text-blue-300 transition duration-200">Comment Form</Link>
+                </li> */}
+                <li>
+                    <Link to="/CommentShow" className="hover:text-blue-300 transition duration-200">Comments</Link>
+                </li>
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default Dashboard
+export default Dashboard;

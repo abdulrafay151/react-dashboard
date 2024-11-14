@@ -11,12 +11,14 @@ const signUp = () => {
         signUpUser(model).then(async (res) => {
             console.log(res);
             Navigate("/SignupUserShow")
+            // alert('Signup successful! Welcome!');
             try {
                 await dataSet(`Users`, model, res.user.uid)
             } catch (err) {
                 console.log(err);
             }
         }).catch((err) => {
+            alert("Fill out the Signup form, then Signup it.");
             console.log(err);
         })
     }
@@ -29,8 +31,8 @@ const signUp = () => {
 
     return (
         <>
-            <div className="flex items-center justify-center min-h-screen bg-gray-100">
-                <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
+            <div className="flex items-center justify-center min-h-screen">
+                <div className="w-full max-w-md p-8 space-y-6 mt-[-90px] bg-white rounded-lg shadow-2xl shadow-[black]">
                     <h2 className="text-2xl font-bold text-center text-gray-800">Sign Up</h2>
                     <div className='space-y-4'>
                         <div>
